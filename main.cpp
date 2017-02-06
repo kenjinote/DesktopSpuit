@@ -102,7 +102,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPreInst, LPSTR pCmdLine, int 
 {
 	MSG msg;
 	WNDCLASS wndclass = { 0, WndProc, 0, DLGWINDOWEXTRA, hInstance,
-		0, LoadCursor(0, IDC_ARROW), 0, 0, szClassName };
+		LoadIcon(hInstance, MAKEINTRESOURCE(IDI_ICON1)),
+		LoadCursor(0, IDC_ARROW), 0, 0, szClassName };
 	RegisterClass(&wndclass);
 	RECT rect;
 	SetRect(&rect, 0, 0, 310, 88);
